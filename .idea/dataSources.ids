@@ -66,6 +66,7 @@
       <column name="lvl" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="house" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="money" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="admin" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
       <index name="unique_id" unique="true" columns="id"/>
     </table>

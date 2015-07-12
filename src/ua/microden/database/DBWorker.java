@@ -26,6 +26,7 @@ public class DBWorker {
         Frame.lvl = rs.getInt("lvl");
         Frame.money = rs.getInt("money");
         Frame.house = rs.getInt("house");
+        Frame.admin = rs.getInt("admin");
         if(Frame.house!=255) {
             rs = statement.executeQuery("SELECT * FROM housestats WHERE id=" + Frame.house);
             rs.next();

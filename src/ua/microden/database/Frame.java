@@ -17,6 +17,7 @@ public class Frame extends JFrame{
     public static int money;
     public static boolean online;
     public static int house;
+    public static int admin;
     public static int uhclass;
     public static int[] hclass = new int[10];
     public static int[] hnum = new int[10];
@@ -45,7 +46,7 @@ public class Frame extends JFrame{
     }
 
     public void stat(){
-        setSize(350, 270);
+        setSize(370, 270);
         setLocationRelativeTo(null);
         setLayout(new FlowLayout(FlowLayout.LEFT));
         addLabel("Игровой ник: " + login, 18);
@@ -55,6 +56,35 @@ public class Frame extends JFrame{
             addLabel("Дом в игре: №" + house + " [" + uhclass + "]", 18);
         }else{
             addLabel("Дом в игре отсутствует", 18);
+        }
+        switch (admin){
+            case 0: addLabel("Жалкий смертный", 18);
+            case 1:
+            case 2:
+                    addLabel("Статус: Практикант ["+admin+"]", 18);
+                    break;
+            case 3:
+            case 4:
+                    addLabel("Статус: Младший Модератор ["+admin+"]", 18);
+                    break;
+            case 5: addLabel("Статус: Модератор ["+admin+"]", 18);
+                    break;
+            case 6: addLabel("Статус: Старший Модератор ["+admin+"]", 18);
+                    break;
+            case 7: addLabel("Статус: Главный Модератор ["+admin+"]", 18);
+                    break;
+            case 8: addLabel("Статус: Младший Администратор ["+admin+"]", 18);
+                    break;
+            case 9: addLabel("Статус: Администратор ["+admin+"]", 18);
+                    break;
+            case 10: addLabel("Статус: Старший Администратор ["+admin+"]", 18);
+                    break;
+            case 11: addLabel("Статус: Специальный Администратор ["+admin+"]", 18);
+                    break;
+            case 12: addLabel("Статус: Главный Администратор ["+admin+"]", 18);
+                    break;
+            case 13: addLabel("Статус: Основатель ["+admin+"]", 18);
+                    break;
         }
     }
 
