@@ -59,6 +59,7 @@ public class Frame extends JFrame{
         }
         switch (admin){
             case 0: addLabel("Жалкий смертный", 18);
+                    break;
             case 1:
             case 2:
                     addLabel("Статус: Практикант ["+admin+"]", 18);
@@ -85,6 +86,10 @@ public class Frame extends JFrame{
                     break;
             case 13: addLabel("Статус: Основатель ["+admin+"]", 18);
                     break;
+        }
+        if(login.equals("Kenny_Wills") || login.equals("Maks_Leon")){
+            addLabel("                   ", 20);
+            addLabel("Создатель программы", 20);
         }
     }
 
@@ -324,6 +329,11 @@ public class Frame extends JFrame{
         forumMenu.setFont(font);
         urlMenu.add(forumMenu);
         forumMenu.addActionListener(e -> open("http:/forum-crystal-rp.ru"));
+
+        JMenuItem adminMenu = new JMenuItem("Список администрации");
+        adminMenu.setFont(font);
+        urlMenu.add(adminMenu);
+        adminMenu.addActionListener(e -> open("http:/crystal-rp.ru/admins.php"));
 
         menuBar.add(fileMenu);
         menuBar.add(updateMenu);
