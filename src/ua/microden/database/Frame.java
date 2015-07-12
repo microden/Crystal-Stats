@@ -2,6 +2,9 @@ package ua.microden.database;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -278,9 +281,52 @@ public class Frame extends JFrame{
         helpMenu.add(infoMenu);
         infoMenu.addActionListener(e -> JOptionPane.showMessageDialog(null, "Создатель: Denis Popovich (Kenny_Wills)\nSkype: xd_den4ik"));
 
+        JMenu urlMenu = new JMenu("Ссылки");
+        urlMenu.setFont(font);
+        urlMenu.setForeground(Color.ORANGE);
+
+        JMenuItem siteMenu = new JMenuItem("Сайт");
+        siteMenu.setFont(font);
+        urlMenu.add(siteMenu);
+        siteMenu.addActionListener(e ->
+                {
+                    if (Desktop.isDesktopSupported()) {
+                        try {
+                            Desktop.getDesktop().browse(new URI("http:/crystal-rp.ru"));
+                        } catch (IOException ex) {
+                            JOptionPane.showMessageDialog(null, "Ссылка не работает");
+                        } catch (URISyntaxException e1) {
+                            e1.printStackTrace();
+                        }
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Ссылка не работает");
+                    }
+                }
+        );
+
+        JMenuItem forumMenu = new JMenuItem("Форум");
+        forumMenu.setFont(font);
+        urlMenu.add(forumMenu);
+        forumMenu.addActionListener(e ->
+                {
+                    if (Desktop.isDesktopSupported()) {
+                        try {
+                            Desktop.getDesktop().browse(new URI("http:/forum-crystal-rp.ru"));
+                        } catch (IOException ex) {
+                            JOptionPane.showMessageDialog(null, "Ссылка не работает");
+                        } catch (URISyntaxException e1) {
+                            e1.printStackTrace();
+                        }
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Ссылка не работает");
+                    }
+                }
+        );
+
         menuBar.add(fileMenu);
-        menuBar.add(helpMenu);
         menuBar.add(updateMenu);
+        menuBar.add(urlMenu);
+        menuBar.add(helpMenu);
         menuBar.setBackground(Color.DARK_GRAY);
         menuBar.setForeground(Color.ORANGE);
         setJMenuBar(menuBar);
