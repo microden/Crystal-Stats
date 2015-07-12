@@ -86,6 +86,7 @@ public class Frame extends JFrame{
                 break;
             case 13: addLabel("Статус: Основатель ["+admin+"]", 20);
                 break;
+            dvhsdg
         }
     }
 
