@@ -185,7 +185,7 @@ public class Frame extends JFrame{
             stat();
         });
 
-        JMenuItem bizMenu = new JMenuItem("Свободные бизнесы");
+        JMenuItem bizMenu = new JMenuItem("Бизнесы");
         bizMenu.setFont(font);
         bizMenu.setBackground(Color.ORANGE);
         fileMenu.add(bizMenu);
