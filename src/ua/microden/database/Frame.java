@@ -288,40 +288,12 @@ public class Frame extends JFrame{
         JMenuItem siteMenu = new JMenuItem("Сайт");
         siteMenu.setFont(font);
         urlMenu.add(siteMenu);
-        siteMenu.addActionListener(e ->
-                {
-                    if (Desktop.isDesktopSupported()) {
-                        try {
-                            Desktop.getDesktop().browse(new URI("http:/crystal-rp.ru"));
-                        } catch (IOException ex) {
-                            JOptionPane.showMessageDialog(null, "Ссылка не работает");
-                        } catch (URISyntaxException e1) {
-                            e1.printStackTrace();
-                        }
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Ссылка не работает");
-                    }
-                }
-        );
+        siteMenu.addActionListener(e -> open("http:/crystal-rp.ru"));
 
         JMenuItem forumMenu = new JMenuItem("Форум");
         forumMenu.setFont(font);
         urlMenu.add(forumMenu);
-        forumMenu.addActionListener(e ->
-                {
-                    if (Desktop.isDesktopSupported()) {
-                        try {
-                            Desktop.getDesktop().browse(new URI("http:/forum-crystal-rp.ru"));
-                        } catch (IOException ex) {
-                            JOptionPane.showMessageDialog(null, "Ссылка не работает");
-                        } catch (URISyntaxException e1) {
-                            e1.printStackTrace();
-                        }
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Ссылка не работает");
-                    }
-                }
-        );
+        forumMenu.addActionListener(e -> open("http:/forum-crystal-rp.ru"));
 
         menuBar.add(fileMenu);
         menuBar.add(updateMenu);
@@ -353,6 +325,20 @@ public class Frame extends JFrame{
             remove(label);
             repaint();
             revalidate();
+        }
+    }
+
+    public void open(String url){
+        if (Desktop.isDesktopSupported()) {
+            try {
+                Desktop.getDesktop().browse(new URI(url));
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "Ссылка не работает");
+            } catch (URISyntaxException e1) {
+                e1.printStackTrace();
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Ссылка не работает");
         }
     }
 }
