@@ -45,7 +45,7 @@ public class Frame extends JFrame{
     }
 
     public void stat(){
-        setSize(300, 270);
+        setSize(350, 270);
         setLocationRelativeTo(null);
         setLayout(new FlowLayout(FlowLayout.LEFT));
         addLabel("Игровой ник: " + login, 18);
@@ -279,7 +279,7 @@ public class Frame extends JFrame{
         JMenuItem infoMenu = new JMenuItem("О программе");
         infoMenu.setFont(font);
         helpMenu.add(infoMenu);
-        infoMenu.addActionListener(e -> JOptionPane.showMessageDialog(null, "Создатель: Denis Popovich (Kenny_Wills)\nSkype: xd_den4ik"));
+        infoMenu.addActionListener(e -> JOptionPane.showMessageDialog(null, "Создатели:\nDenis Popovich (Kenny_Wills)\nMax Leva (Maks_Leon)"));
 
         JMenu urlMenu = new JMenu("Ссылки");
         urlMenu.setFont(font);

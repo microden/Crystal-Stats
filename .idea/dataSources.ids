@@ -35,4 +35,39 @@
       <index name="unique_id" unique="true" columns="id"/>
     </table>
   </data-source>
+  <data-source name="MySQL - user123456@85.10.205.173" uuid="6da2fa98-3d46-4927-8f08-170b62f9a0df">
+    <database-info product="MySQL" version="5.6.25" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="user123456"/>
+    <table name="bizstats" schema="" catalog="user123456" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="price" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="mats" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="free" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="unique_id" unique="true" columns="id"/>
+      <index name="unique_name" unique="true" columns="name"/>
+    </table>
+    <table name="housestats" schema="" catalog="user123456" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="class" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="price" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="free" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <index name="unique_id" unique="true" columns="id"/>
+    </table>
+    <table name="users" schema="" catalog="user123456" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="username" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="lvl" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="house" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="money" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="unique_id" unique="true" columns="id"/>
+    </table>
+  </data-source>
 </component>
