@@ -40,7 +40,7 @@ public class Frame extends JFrame{
         labels.add(label);
         label.setAlignmentX(JLabel.CENTER_ALIGNMENT);
         label.setForeground(Color.ORANGE);
-        label.setFont(new Font("Verdana", Font.PLAIN, size));
+        label.setFont(new Font("Dialog", Font.ITALIC, size));
         add(label);
         revalidate();
     }
@@ -49,47 +49,43 @@ public class Frame extends JFrame{
         setSize(370, 270);
         setLocationRelativeTo(null);
         setLayout(new FlowLayout(FlowLayout.LEFT));
-        addLabel("Игровой ник: " + login, 18);
-        addLabel("Игровой уровень: " + lvl, 18);
-        addLabel("Деньги в игре: " + money, 18);
+        addLabel("Игровой ник: " + login, 20);
+        addLabel("Игровой уровень: " + lvl, 20);
+        addLabel("Деньги в игре: " + money, 20);
         if(house!=255) {
-            addLabel("Дом в игре: №" + house + " [" + uhclass + "]", 18);
+            addLabel("Дом в игре: №" + house + " [" + uhclass + "]", 20);
         }else{
-            addLabel("Дом в игре отсутствует", 18);
+            addLabel("Дом в игре отсутствует", 20);
         }
         switch (admin){
-            case 0: addLabel("Жалкий смертный", 18);
+            case 0: addLabel("Жалкий смертный", 20);
                     break;
             case 1:
             case 2:
-                    addLabel("Статус: Практикант ["+admin+"]", 18);
+                    addLabel("Статус: Практикант ["+admin+"]", 20);
                     break;
             case 3:
             case 4:
-                    addLabel("Статус: Младший Модератор ["+admin+"]", 18);
+                    addLabel("Статус: Младший Модератор ["+admin+"]", 20);
                     break;
-            case 5: addLabel("Статус: Модератор ["+admin+"]", 18);
+            case 5: addLabel("Статус: Модератор ["+admin+"]", 20);
                     break;
-            case 6: addLabel("Статус: Старший Модератор ["+admin+"]", 18);
+            case 6: addLabel("Статус: Старший Модератор ["+admin+"]", 20);
                     break;
-            case 7: addLabel("Статус: Главный Модератор ["+admin+"]", 18);
+            case 7: addLabel("Статус: Главный Модератор ["+admin+"]", 20);
                     break;
-            case 8: addLabel("Статус: Младший Администратор ["+admin+"]", 18);
+            case 8: addLabel("Статус: Младший Администратор ["+admin+"]", 20);
                     break;
-            case 9: addLabel("Статус: Администратор ["+admin+"]", 18);
+            case 9: addLabel("Статус: Администратор ["+admin+"]", 20);
                     break;
-            case 10: addLabel("Статус: Старший Администратор ["+admin+"]", 18);
+            case 10: addLabel("Статус: Старший Администратор ["+admin+"]", 20);
                     break;
-            case 11: addLabel("Статус: Специальный Администратор ["+admin+"]", 18);
+            case 11: addLabel("Статус: Специальный Администратор ["+admin+"]", 20);
                     break;
-            case 12: addLabel("Статус: Главный Администратор ["+admin+"]", 18);
+            case 12: addLabel("Статус: Главный Администратор ["+admin+"]", 20);
                     break;
-            case 13: addLabel("Статус: Основатель ["+admin+"]", 18);
+            case 13: addLabel("Статус: Основатель ["+admin+"]", 20);
                     break;
-        }
-        if(login.equals("Kenny_Wills") || login.equals("Maks_Leon")){
-            addLabel("                   ", 20);
-            addLabel("Создатель программы", 20);
         }
     }
 
