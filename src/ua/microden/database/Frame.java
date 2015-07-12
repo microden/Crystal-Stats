@@ -59,33 +59,33 @@ public class Frame extends JFrame{
         }
         switch (admin){
             case 0: addLabel("Жалкий смертный", 20);
-                    break;
+                break;
             case 1:
             case 2:
-                    addLabel("Статус: Практикант ["+admin+"]", 20);
-                    break;
+                addLabel("Статус: Практикант ["+admin+"]", 20);
+                break;
             case 3:
             case 4:
-                    addLabel("Статус: Младший Модератор ["+admin+"]", 20);
-                    break;
+                addLabel("Статус: Младший Модератор ["+admin+"]", 20);
+                break;
             case 5: addLabel("Статус: Модератор ["+admin+"]", 20);
-                    break;
+                break;
             case 6: addLabel("Статус: Старший Модератор ["+admin+"]", 20);
-                    break;
+                break;
             case 7: addLabel("Статус: Главный Модератор ["+admin+"]", 20);
-                    break;
+                break;
             case 8: addLabel("Статус: Младший Администратор ["+admin+"]", 20);
-                    break;
+                break;
             case 9: addLabel("Статус: Администратор ["+admin+"]", 20);
-                    break;
+                break;
             case 10: addLabel("Статус: Старший Администратор ["+admin+"]", 20);
-                    break;
+                break;
             case 11: addLabel("Статус: Специальный Администратор ["+admin+"]", 20);
-                    break;
+                break;
             case 12: addLabel("Статус: Главный Администратор ["+admin+"]", 20);
-                    break;
+                break;
             case 13: addLabel("Статус: Основатель ["+admin+"]", 20);
-                    break;
+                break;
         }
     }
 
