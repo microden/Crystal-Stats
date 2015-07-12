@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Crystal-Stats:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Crystal_Stats_jar</output-path>
+    <root id="archive" name="Crystal-Stats.jar">
+      <element id="module-output" name="Crystal-Stats" />
+      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/mysql-connector-java-5.1.35.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
