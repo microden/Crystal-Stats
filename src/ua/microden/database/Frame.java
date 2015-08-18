@@ -335,6 +335,14 @@ public class Frame extends JFrame{
         menuBar.add(updateMenu);
         menuBar.add(urlMenu);
         menuBar.add(helpMenu);
+
+        if (admin > 0){
+            JMenu admMenu = new JMenu("Админ.панель");
+            admMenu.setFont(font);
+            admMenu.setForeground(Color.ORANGE);
+            menuBar.add(admMenu);
+        }
+
         menuBar.setBackground(Color.DARK_GRAY);
         menuBar.setForeground(Color.ORANGE);
         setJMenuBar(menuBar);
